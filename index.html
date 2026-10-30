@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HexDev Portfolio</title>
+  <link rel="icon" type="image/png" href="./static/icons/HexDev_Logo_rounded.svg">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              accent: '#a78bfc', /* Purple accent */
+              dark: '#0f172a',   /* Slate 900 */
+              card: '#1e293b',   /* Slate 800 */
+              border: '#334155'  /* Slate 700 */
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-slate-900 min-h-screen flex flex-col justify-between">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group transition">
+      <!-- Square Logo -->
+      <img 
+        src="./static/icons/HexDev_Logo_square.svg" 
+        alt="HexDev Logo" width="180px"
+      />
+    </a>
+      <nav class="flex gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-brand-accent transition">About</a>
+        <a href="#projects" class="hover:text-brand-accent transition">Projects</a>
+        <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 flex-1">
+    
+    <!-- Hero / Intro Section -->
+    <section id="hero" class="py-12 border-b border-brand-border">
+      <div class="max-w-2xl">
+        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-brand-accent bg-brand-accent/10 px-3 py-1 rounded-full mb-4">
+          Available for Opportunities
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Hi, I'm <span class="text-brand-accent">Pritam Saha</span>.
+        </h1>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          Full-Stack Developer & Machine Learning enthusiast passionate about building reliable web services, scalable data pipelines, and clean user interfaces.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="#projects" class="px-5 py-2.5 bg-brand-accent text-slate-950 font-semibold rounded-lg hover:bg-violet-300 transition shadow-sm">
+            View Projects
+          </a>
+          <a href="https://github.com/Developer-PritamSaha" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 border border-brand-border hover:border-violet-400 rounded-lg text-slate-300 hover:text-white transition">
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section id="about" class="py-12 border-b border-brand-border">
+      <h2 class="text-2xl font-bold text-white mb-6">About & Technologies</h2>
+      <p class="text-slate-400 mb-6 leading-relaxed">
+        I enjoy turning complex engineering problems into clean, well-architected applications. Here are some of the tools, frameworks, and technologies I work with regularly:
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">Python</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">FastAPI</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">PyTorch</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">Vue.js</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">Tailwind CSS</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">PostgreSQL / Redis</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">Docker</span>
+        <span class="px-3 py-1 bg-brand-card border border-brand-border text-sm rounded-md text-slate-300">Git & GitHub</span>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Featured Projects</h2>
+          <p class="text-slate-400 text-sm mt-1">A selection of recent projects and tools I've built.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Project Card 1 -->
+        <article class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-brand-accent/50 transition duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-lg font-bold text-white">Hospital Management System</h3>
+              <span class="text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded">Web App</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Hospital Management System (HMS) web application allows efficient management of patients, doctors, appointments, and treatments in one unified place.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Flask</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Sqlite</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Redis</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Celery</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Vue 3</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Bootstrap 5</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="https://github.com/Developer-PritamSaha/hospital-management-app" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+                GitHub &rarr;
+              </a>
+              <a href="https://drive.google.com/file/d/1gItJ6L7xiDPZXtatUgZjUXDaGR3oIGvE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition">
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-brand-accent/50 transition duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-lg font-bold text-white">Quiz Master</h3>
+              <span class="text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded">Web App</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              It is a multi-user exam preparation web application built using Flask. It features role-based authentication for administrators and users, allowing structured quiz and subject management along with interactive performance analytics.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Flask</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Sqlite</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Jinja2</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Bootstrap 5</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Chartjs</span>
+              
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="https://github.com/Developer-PritamSaha/quiz-master-v1" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+                GitHub &rarr;
+              </a>
+              <a href="https://drive.google.com/file/d/1ODDvP3rLfagIwqaXWyYy0LMliHw2QwKn/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition">
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-brand-accent/50 transition duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-lg font-bold text-white">Hex Weather</h3>
+              <span class="text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded">Frontend</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              A simple app to check your current location's weather stats by using OpenWeather APIs
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Vue 3</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Prime Vue</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Javascript</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="https://github.com/Developer-PritamSaha/Hex_Weather_App" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+                GitHub &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 4 -->
+        <!-- <article class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-brand-accent/50 transition duration-200">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-lg font-bold text-white">Project Title Four</h3>
+              <span class="text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded">Full Stack</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Responsive web dashboard with role-based authentication, real-time data visualisations, and database caching.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Flask</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">Vue.js</span>
+              <span class="text-xs font-mono text-slate-400 bg-brand-dark px-2 py-1 rounded">PostgreSQL</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="https://github.com/your-username/project-4" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+                GitHub &rarr;
+              </a>
+            </div>
+          </div>
+        </article> -->
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 border-t border-brand-border text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Get in Touch</h2>
+      <p class="text-slate-400 max-w-md mx-auto text-sm mb-6">
+        Interested in collaborating, discussing a project, or just connecting? Feel free to reach out.
+      </p>
+      <div class="inline-flex gap-4">
+        <!-- Cloudflare-safe email wrapper -->
+        <!--email_off-->
+        <a href="mailto:psafrad@gmail.com" class="px-5 py-2.5 bg-brand-card hover:bg-slate-700 border border-brand-border text-sky-200 rounded-lg text-sm font-medium transition ">
+          psafrad@gmail.com
+        </a>
+        <!--email_on-->
+        <a href="https://www.linkedin.com/in/pritam-saha-a7221b220/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-brand-card hover:bg-slate-700 border border-brand-border text-sky-200 rounded-lg text-sm font-medium transition">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border py-6 text-center text-xs text-slate-500">
+    <p>&copy; <span id="year"></span> Pritam Saha | Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
